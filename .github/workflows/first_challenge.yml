@@ -1,0 +1,46 @@
+name: First_Challenge_print_Date-Time
+
+on: push
+
+jobs:
+  job1:
+    name: First job Ubuntu
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Step one
+      uses: actions/checkout@v2
+    - name: Print Date Ubuntu
+      run: date
+
+  job2:
+    name: second job Windows
+    runs-on: windows-latest
+
+    steps:
+    - name: Step one
+      uses: actions/checkout@v2
+    - name: Print Date Windows
+      run: Get-Date
+
+  job3:
+    name: Third job Mac
+    runs-on: macos-latest
+
+    steps:
+    - name: Step one
+      uses: actions/checkout@v2
+    - name: Print Date MacOS
+      run: date
+
+  job4:
+    name: Fourth Job Ubunt Last
+    runs-on: ubuntu-latest
+    needs: [job1, job2, job3]
+
+    steps:
+    - name: Step one
+      uses: actions/checkout@v2
+    - name: Print Date Ubuntu  Last
+      run: date
+
