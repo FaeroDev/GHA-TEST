@@ -16,7 +16,7 @@ jobs:
         echo Add other actions to build,
         echo test, and deploy your project.
     - name: update apt
-      run: apt update
+      run: sudo apt update
     - name: install npm
-      run: apt install npm -y
+      run: sudo apt install npm -y
       
