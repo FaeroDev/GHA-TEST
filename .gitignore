@@ -105,3 +105,4 @@ dist
 
 .git
 .DS_Store
+.env
